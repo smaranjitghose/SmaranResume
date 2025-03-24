@@ -5,11 +5,11 @@
 [![GitHub Issues](https://img.shields.io/github/issues/smaranjitghose/SmaranResume)](https://github.com/smaranjitghose/SmaranResume/issues)
 [![GitHub License](https://img.shields.io/github/license/smaranjitghose/SmaranResume)](https://github.com/smaranjitghose/SmaranResume/blob/main/LICENSE)
 
-![Smaran Resume Template Preview](./assets/resume_preview_v001.png)
+![v0.0.1-1](./output/output_v001_1.png)
 
 A professional, modern LaTeX resume template designed specifically for developers and tech professionals. Features clean typography, smart section organization, and ATS-friendly formatting.
 
-![v0.0.1-1](./output/output_v001_1.png)
+
 
 ## Table of Contents 📚
 
