@@ -52,7 +52,7 @@ All information provided in this template is for placeholder purposes only and s
 ```
 
 ## Preview 🖼️
-The PDF generated out of the latest version of the code can be found [here]
+The PDF generated out of the latest version of the code can be found [here](./output/Smaran_Resume.pdf)
 
 ## Getting Started 🚀
 
