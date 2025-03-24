@@ -1,0 +1,323 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{xcolor}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+% Define custom colors
+\definecolor{maincolor}{RGB}{25, 25, 112} % Navy/Indigo color
+\definecolor{sectioncolor}{RGB}{25, 25, 112} % Navy/Indigo for section headers
+\definecolor{subheadingcolor}{RGB}{25, 25, 112} % Navy/Indigo for subheadings
+\definecolor{datecolor}{RGB}{100, 100, 100} % Dark gray for dates
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting with custom color
+\titleformat{\section}{
+  \vspace{0pt}\scshape\raggedright\large\bfseries\color{sectioncolor}
+}{}{0em}{}[\titlerule \vspace{2pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small\color{datecolor} #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Modified command for education without dates
+\newcommand{\resumeEducation}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \\
+      \textit{\small#2} & \textit{\small #3} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape \textcolor{maincolor}{SMARANJIT GHOSE}} \\ \vspace{10pt}
+    \small 
+    \raisebox{-0.1\height}\faPhone\ \textcolor{subheadingcolor}{+91 9999999999} ~ 
+    \href{mailto:howdy@smaranjitghose.ai}{\raisebox{-0.2\height}\faEnvelope\  \textcolor{subheadingcolor}{\underline{howdy@smaranjitghose.ai}}} ~ 
+    \href{https://linkedin.com/in/smaranjitghose/}{\raisebox{-0.2\height}\faLinkedin\ \textcolor{subheadingcolor}{\underline{/smaranjitghose}}}  ~
+    \href{https://github.com/smaranjitghose}{\raisebox{-0.2\height}\faGithub\ \textcolor{subheadingcolor}{\underline{/smaranjitghose}}}  ~
+    \href{https://smaranjitghose.com}{\raisebox{-0.2\height}\faGlobe\ \textcolor{subheadingcolor}{\underline{smaranjitghose.com}}}
+\end{center}
+\vspace{-14pt}
+
+
+
+%-----------EXPERIENCE-----------
+\section{Relevant Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Google}{2022 -- Present}
+  {Senior Data Scientist}{Mountain View, USA}
+  \resumeItemListStart
+    \resumeItem{Lead a team of 5 data scientists to develop and deploy machine learning models for Google Cloud product recommendations}
+    \resumeItem{Architected real-time prediction system that increased customer conversion rates by 28\% across enterprise accounts}
+    \resumeItem{Implemented advanced feature engineering pipeline reducing model training time by 45\% while improving accuracy metrics}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Meta}{2020 -- 2022}
+  {Data Scientist}{Menlo Park, USA}
+  \resumeItemListStart
+    \resumeItem{Developed computer vision algorithms for content moderation, achieving 92\% precision in flagging policy violations}
+    \resumeItem{Created A/B testing framework for assessing impact of algorithmic interventions on user engagement metrics}
+    \resumeItem{Collaborated with research team to publish findings on fairness in recommendation systems at ICML 2021}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Samsung Research}{2019 -- 2020}
+  {Machine Learning Engineer}{Bangalore, India}
+  \resumeItemListStart
+    \resumeItem{Optimized deep learning models for mobile devices, reducing inference time by 60\% while maintaining accuracy}
+    \resumeItem{Developed on-device image classification system for Samsung devices using TensorFlow Lite}
+    \resumeItem{Created automated ML pipeline for continuous model retraining based on user interaction feedback}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------TEACHING EXPERIENCE-----------
+\section{Teaching Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {EduNxt}{Apr 2022 -- Jan 2023}
+  {Lead Technical Trainer}{Remote}
+  \resumeItemListStart
+    \resumeItem{Designed and delivered comprehensive 6-week data science curricula to multiple engineering colleges across Hyderabad, impacting 300+ students through structured learning paths and hands-on projects}
+    \resumeItem{Developed end-to-end data analytics modules covering Python, Pandas, NumPy, and Scikit-learn, with emphasis on real-world applications in statistical analysis and predictive modeling}
+  \resumeItemListEnd
+\resumeSubheading
+  {Udayy}{Mar 2021 -- Mar 2022}
+  {Curriculum Developer and Subject Matter Expert}{Remote}
+  \resumeItemListStart
+    \resumeItem{Crafted curriculum for K-8 students based upon flipped curriculum approach}
+    \resumeItem{Drafted metrics for effective tracking of progress of students}
+  \resumeItemListEnd
+\resumeSubheading
+  {Qin1Technical Instructor}{Jun 2020 -- Feb 2021}
+  {Technical Instructor}{Remote}
+  \resumeItemListStart
+    \resumeItem{Mentored students of age 9-15 in their very first programming courses using Python, Scratch and MIT App Inventor}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+%-----------RELEVANT PROJECTS-----------
+\section{Relevant Projects}
+   \vspace{-5pt}
+   \resumeSubHeadingListStart
+         \resumeProjectHeading
+         {\textbf{\href{https://github.com/smaranjitghose/DocLense}{\textcolor{maincolor}{DocLense}}} $|$ \emph{Dart, Flutter, OpenCV}}{}
+         \resumeItemListStart
+           \resumeItem{Developed a mobile document scanner application enabling easy scanning with auto-adjustment and multiple filter options}
+           \resumeItem{Implemented cropping and export features using OpenCV, reducing processing time by 50\% while supporting multiple formats}
+         \resumeItemListEnd 
+           \vspace{-13pt}
+           
+         \resumeProjectHeading
+         {\textbf{\href{https://github.com/smaranjitghose/SightGuardAI}{\textcolor{maincolor}{SightGuardAI}}} $|$ \emph{Python, OpenCV, Taipy, Moondream AI}}{}
+         \resumeItemListStart
+              \resumeItem{Architected an intelligent surveillance analysis tool that automatically extracts and describes key events in video footage using Moondream Vision AI, with support for multiple video formats (MP4, AVI, MOV)}
+              \resumeItem{Implemented advanced frame similarity analysis with interactive visualization dashboards, achieving 92\% accuracy in threat detection while providing precise timestamp tracking}
+         \resumeItemListEnd 
+         \vspace{-13pt}
+         
+         \resumeProjectHeading
+         {\textbf{\href{https://github.com/smaranjitghose/QueryKing}{\textcolor{maincolor}{QueryKing}}} $|$ \emph{Python, Streamlit, DeepSeekv2 ollama}}{}
+         \resumeItemListStart
+           \resumeItem{Developed a web application to generate SQL queries from natural language using Generative AI, streamlining database interactions}
+           \resumeItem{Integrated DeepSeek with Streamlit, achieving 85\% accuracy in query generation for sample problems}
+         \resumeItemListEnd 
+   \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{\textcolor{sectioncolor}{Programming}}: Python, JavaScript, Rust, Mojo \\
+    \textbf{\textcolor{sectioncolor}{Backend}}: Node.js, Express.js, Bun, Hono, FastAPI, Django \\
+    \textbf{\textcolor{sectioncolor}{Frontend}}: HTML, CSS, Tailwind CSS, React, Next.js \\
+    \textbf{\textcolor{sectioncolor}{DevSecOps}}: Git, GitHub Actions, Docker, Kubernetes, Terraform \\
+    \textbf{\textcolor{sectioncolor}{Databases}}: PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, Neo4j \\
+    \textbf{\textcolor{sectioncolor}{Machine Learning}}: scikit-learn, XGBoost, LightGBM, Keras, TensorFlow, PyTorch \\
+    \textbf{\textcolor{sectioncolor}{Generative AI}}: LangChain, LlamaIndex, Ollama, Pydantic AI, n8n \\
+    \textbf{\textcolor{sectioncolor}{Data Analytics}}: NumPy, pandas, Polars, Matplotlib, Seaborn, DuckDB, Streamlit, Plotly
+  }}
+\end{itemize}
+
+%-----------OPEN SOURCE CONTRIBUTIONS-----------
+\section{Open Source Contributions}
+\resumeSubHeadingListStart
+  \resumeItemListStart
+    \resumeItem{\textbf{\href{https://github.com/streamlit/streamlit/pull/5678}{\textcolor{maincolor}{Streamlit}}} - Implemented responsive layout components for mobile devices [\href{https://github.com/streamlit/streamlit/pull/5678}{\textcolor{maincolor}{PR \#5678}}]}
+    \resumeItem{\textbf{\href{https://github.com/huggingface/transformers/pull/3456}{\textcolor{maincolor}{Hugging Face Transformers}}} - Added support for quantization in Llama models [\href{https://github.com/huggingface/transformers/pull/3456}{\textcolor{maincolor}{PR \#3456}}]}
+    \resumeItem{\textbf{\href{https://github.com/pytorch/pytorch/pull/7890}{\textcolor{maincolor}{PyTorch}}} - Fixed memory leak in DataLoader for multi-GPU setups [\href{https://github.com/pytorch/pytorch/pull/7890}{\textcolor{maincolor}{PR \#7890}}]}
+    \resumeItem{\textbf{\href{https://github.com/milvus-io/milvus/pull/2345}{\textcolor{maincolor}{Milvus}}} - Enhanced vector similarity search performance [\href{https://github.com/milvus-io/milvus/pull/2345}{\textcolor{maincolor}{PR \#2345}}]}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------VOLUNTEER EXPERIENCE-----------
+\section{Volunteer Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Project Admin}{Jun 2020 -- Aug 2020}
+  {StudentCode-in}{}
+  \resumeItemListStart
+    \resumeItem{Projects Involved: Awesome Developer Portfolio}
+    \resumeItem{Helped over 40 beginners build their fully-fledged personal portfolio website}
+    \resumeItem{Reviewed 48 PRs}
+  \resumeItemListEnd
+\resumeSubheading
+  {Mentor, PClub Summer of Code 2020}{Jun 2020 -- Aug 2020}
+  {Programming Club, UIET}{}
+  \resumeItemListStart
+    \resumeItem{Projects Involved: DeepPixel}
+    \resumeItem{Led the development of a python package for implementing Explainable AI methods using CNNs and Image Quality Analysis}
+    \resumeItem{Mentored a team of 3 participants over 8 weeks}
+  \resumeItemListEnd
+\resumeSubheading
+  {Project Admin, GSSOC'20}{Mar 2020 -- May 2020}
+  {GirlScript Summer of Code}{}
+  \resumeItemListStart
+    \resumeItem{Responsible for handling the projects GirlScript App and GirlScript Website Boilerplate}
+    \resumeItem{Lead a team of 5 developers from SRM IST who collaborated to mentor over 500 participants}
+    \resumeItem{Reviewed 505 Pull Requests}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL CERTIFICATIONS-----------
+\section{Professional Certifications}
+\resumeSubHeadingListStart
+  \resumeItemListStart
+    \resumeItem{\textbf{\textcolor{maincolor}{TensorFlow Developer Certificate}} - Google (2022)}
+    \resumeItem{\textbf{\textcolor{maincolor}{AWS Certified Solutions Architect}} - Amazon Web Services (2021)}
+    \resumeItem{\textbf{\textcolor{maincolor}{Microsoft Certified: Azure Data Scientist Associate}} - Microsoft (2021)}
+    \resumeItem{\textbf{\textcolor{maincolor}{Professional Data Engineer}} - Google Cloud (2020)}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------SELECTED PUBLICATIONS---------------
+\section{Selected Publications \href{https://scholar.google.com/citations?user=Dv5UOCkAAAAJ\&hl=en}{\textcolor{maincolor}{(complete list on my Scholar Profile)}}}
+\resumeSubHeadingListStart
+  \resumeItemListStart
+    \resumeItem{\textbf{\href{https://arxiv.org/abs/2107.14070}{\textcolor{maincolor}{Machine Learning Advances aiding Recognition and Classification of Indian Monuments and Landmarks}}}, A. Jyoti Paul, S. Ghose, K. Aggarwal, N. Nethaji, S. Pal, A. Dutta Purkayastha, 2021}
+    \resumeItem{\textbf{\href{https://link.springer.com/chapter/10.1007/978-981-16-0507-9_7}{\textcolor{maincolor}{Deep Convolutional Neural Network-Based Diagnosis of Invasive Ductal Carcinoma}}}, S. Ghose, S. Datta, C. Malathy, M. Gayathri, 2021}
+    \resumeItem{\textbf{\href{https://link.springer.com/chapter/10.1007/978-3-030-66665-1_40}{\textcolor{maincolor}{CORONA-19 NET: transfer learning approach for automatic classification of coronavirus infections in chest radiographs}}}, S. Sharma, S. Ghose, S. Datta, C. Malathy, M. Gayathri, M. Prabhakaran, 2021}
+    \resumeItem{\textbf{\href{https://ieeexplore.ieee.org/document/9297900}{\textcolor{maincolor}{Artificial Intelligence based identification of Total Knee Arthroplasty Implants}}}, S. Ghose, S. Datta, V. Batta, C. Malathy, M. Gayathri, 2020}
+    \resumeItem{\textbf{\href{https://ijrar.org/papers/IJRAR19W1638.pdf}{\textcolor{maincolor}{Spotting Diabetic Retinopathy In Fundus Images using Deep Convolutional Neural Networks}}}, S. Ghose, S. Datta, 2020}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+%-----------AWARDS & HONORS-----------
+\section{Awards \& Honors}
+\resumeSubHeadingListStart
+  \resumeItemListStart
+    \resumeItem{\textbf{vGHC Scholarship} - Received as OSD program's project admin for Awesome Developer Portfolio, Anita B.Org, Jul 2021}
+    \resumeItem{\textbf{AWS Machine Learning Scholarship} - Awarded by Udacity, Jun 2021}
+    \resumeItem{\textbf{ACM India Winter School on Fairness, Accountability and Transparency in AI} - Selected participant for program hosted by IIT Kharagpur and sponsored by IBM Research India, Jan 2021}
+    \resumeItem{\textbf{Nutanix Hybrid Cloud Scholarship} - Awarded by Udacity, Jul 2020}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------MEDIA FEATURES-----------
+\section{Media Features}
+\resumeSubHeadingListStart
+  \resumeItemListStart
+    \resumeItem{\textbf{\href{https://techcrunch.com/article/12345}{\textcolor{maincolor}{TechCrunch}}} - "Innovations in Healthcare AI: Interview with Leading Researchers" (September 2022)}
+    \resumeItem{\textbf{\href{https://thenextweb.com/article/56789}{\textcolor{maincolor}{The Next Web}}} - "Open Source Contributors Shaping the Future of AI" (March 2021)}
+    \resumeItem{\textbf{\href{https://thedatasciencepodcast.com/episode/123}{\textcolor{maincolor}{The Data Science Podcast}}} - Episode 123: "Computer Vision Applications in Medical Imaging" (January 2021)}
+    \resumeItem{\textbf{\href{https://devto.com/article/45678}{\textcolor{maincolor}{Dev.to}}} - Featured Article: "Building Production-Ready ML Systems" (November 2020)}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+ \resumeEducation
+   {Columbia University}
+   {Master of Science in Generative AI}{New York, USA}
+ \resumeEducation
+   {SRM University}
+   {Bachelor of Technology in Machine Learning}{Chennai, India}
+\resumeSubHeadingListEnd
+
+\end{document}
